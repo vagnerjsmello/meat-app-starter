@@ -20,4 +20,11 @@ export class RestaurantsService {
       .map(response => response.json())
       .catch(ErrorHandler.handlerError)
   }
+
+  restaurantById(id:string):Observable<Restaurant>{
+    const url = `${MEAT_API}/restaurants/${id}`
+    return this.http.get(url)
+      .map(response => response.json())
+      .catch(ErrorHandler.handlerError)
+  }
 }
