@@ -7,6 +7,7 @@ import { Injectable } from "@angular/core";
 import { Restaurant } from "./restaurant/restaurant.model";
 import { MEAT_API } from "../app.api";
 import { ErrorHandler } from "../app.error-handler";
+import { MenuItem } from "app/restaurant-detail/menu-item/menu-item.model";
 
 @Injectable()
 export class RestaurantsService {
@@ -21,10 +22,25 @@ export class RestaurantsService {
       .catch(ErrorHandler.handlerError)
   }
 
-  restaurantById(id:string):Observable<Restaurant>{
+  restaurantById(id: string): Observable<Restaurant> {
     const url = `${MEAT_API}/restaurants/${id}`
     return this.http.get(url)
       .map(response => response.json())
       .catch(ErrorHandler.handlerError)
   }
+
+  reviewOfRestaurant(id: string): Observable<any> {
+    const url = `${MEAT_API}/restaurants/${id}/reviews`
+    return this.http.get(url)
+      .map(response => response.json())
+      .catch(ErrorHandler.handlerError)
+  }
+
+  menuOfRestaurant(id: string): Observable<MenuItem[]>{
+    const url = `${MEAT_API}/restaurants/${id}/menu`
+    return this.http.get(url)
+      .map(response => response.json())
+      .catch(ErrorHandler.handlerError)
+  }
+
 }
