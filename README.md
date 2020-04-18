@@ -1,4 +1,4 @@
-# Curso Construindo Aplicações Web Com o Novo Angular (4, 5 e 6)
+# Curso Construindo Aplicações Web Com o Angular (4, 5 e 6)
 
 Os commits são fundamentos e conceitos do Angular apresentados pelo curso, consequentemente a evolução do app.
 
