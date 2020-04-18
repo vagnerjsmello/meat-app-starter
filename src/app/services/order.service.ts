@@ -2,9 +2,9 @@ import { Injectable } from "@angular/core";
 import { Http, Headers, RequestOptions } from "@angular/http";
 import { Observable } from "rxjs/Observable";
 
-import { ShoppingCartService } from "app/restaurant-detail/shopping-cart/shopping-cart.service";
+import { ShoppingCartService } from "app/services/shopping-cart.service";
 import { CartItem } from "app/restaurant-detail/shopping-cart/cart-item.model";
-import { Order } from "./order.model";
+import { Order } from "../order/order.model";
 import { MEAT_API } from "app/app.api";
 
 
