@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { InputComponent } from "./input/input.component";
 import { RadioComponent } from "./radio/radio.component";
 import { RatingComponent } from "./rating/rating.component";
+import { SnackbarComponent } from './messages/snackbar/snackbar.component';
 
 
 
@@ -13,7 +14,8 @@ import { RatingComponent } from "./rating/rating.component";
     declarations: [
         InputComponent, 
         RadioComponent,
-        RatingComponent
+        RatingComponent,
+        SnackbarComponent
     ],
     imports:[
         CommonModule,
@@ -26,7 +28,8 @@ import { RatingComponent } from "./rating/rating.component";
         RatingComponent,
         CommonModule,
         ReactiveFormsModule,
-        FormsModule
+        FormsModule,
+        SnackbarComponent
     ]
 })
 
